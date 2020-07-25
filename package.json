@@ -1,0 +1,69 @@
+{
+  "name": "@known-as-bmf/store-middleware-persist",
+  "version": "1.0.0",
+  "author": "Julien Avert",
+  "description": "Persistence middleware for @known-as-bmf/store.",
+  "keywords": [
+    "javascript",
+    "state",
+    "state management",
+    "store",
+    "atom",
+    "persist",
+    "localStorage",
+    "sessionStorage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/known-as-bmf/store-middleware-persist.git"
+  },
+  "homepage": "https://github.com/known-as-bmf/store-middleware-persist",
+  "bugs": "https://github.com/known-as-bmf/store-middleware-persist/issues",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/store.esm.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "test:watch": "tsdx test --watch",
+    "test:coverage": "tsdx test --coverage",
+    "lint": "tsdx lint"
+  },
+  "peerDependencies": {
+    "@known-as-bmf/store": "2.0.1"
+  },
+  "devDependencies": {
+    "@known-as-bmf/store": "2.0.1",
+    "@types/jest": "26.0.7",
+    "@typescript-eslint/eslint-plugin": "3.7.0",
+    "@typescript-eslint/parser": "3.7.0",
+    "eslint": "7.5.0",
+    "husky": "4.2.5",
+    "prettier": "2.0.5",
+    "pretty-quick": "2.0.1",
+    "tsdx": "0.13.2",
+    "tslib": "2.0.0",
+    "typescript": "3.9.7"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint && pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "endOfLine": "auto"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
